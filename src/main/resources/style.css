@@ -1,0 +1,40 @@
+.header {
+    background-color: #2E8B57;
+    padding: 20px;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-list {
+    background-color: #F0F8FF;
+
+}
+
+.input-field {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.add-button {
+    background-color: #2E8B57;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.add-button:hover {
+    background-color: #3CB371;
+}

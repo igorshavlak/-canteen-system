@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="610.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.coursework.controllers.LoginController">
+    <children>
+        <Pane prefHeight="600.0" prefWidth="570.0">
+            <children>
+                <ImageView fitHeight="610.0" fitWidth="615.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Amrita Canteen Management Ssyem.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="570.0" prefHeight="610.0" prefWidth="330.0" style="-fx-background-color: a4123f; -fx-background-radius: 50px 0px 0px 50px;">
+            <children>
+                <Label layoutX="43.0" layoutY="256.0" text="Username :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="43.0" layoutY="291.0" text="Password  :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="username" layoutX="116.0" layoutY="253.0" promptText="Enter Username" />
+                <Button layoutX="116.0" layoutY="327.0" mnemonicParsing="false" onAction="#loginCheck" prefHeight="27.0" prefWidth="149.0" style="-fx-background-color: #ffffff; -fx-font-family: System; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 20px;" text="Login" />
+                <Text fx:id="invalid" fill="#ffcece" layoutX="137.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Credentials" visible="false">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Text>
+                <PasswordField fx:id="password" layoutX="116.0" layoutY="288.0" promptText="Enter Password" />
+                <Label layoutX="136.0" layoutY="142.0" text="Login" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="42.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

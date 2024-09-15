@@ -1,0 +1,12 @@
+INSERT INTO CATEGORY (name) VALUES ('desert');
+INSERT INTO MENU (name) VALUES ('breakfast');
+INSERT INTO MENU (name) VALUES ('lunch');
+INSERT INTO MENU (name) VALUES ('dinner');
+INSERT INTO DISHES (name,description,calories,category_id,price) VALUES ('ice cream','fafwefwe',250,1,245);
+INSERT INTO DISHES (name,description,calories,category_id,price) VALUES ('zxc','asd',43,1,343);
+INSERT INTO roles (name) VALUES ('admin');
+INSERT INTO roles (name) VALUES ('student');
+INSERT INTO roles (name) VALUES ('waiter');
+INSERT INTO users (login, password, role_id) VALUES ('admin','admin',1);
+INSERT INTO users (login, password, role_id) VALUES ('student','student',2);
+INSERT INTO users (login, password, role_id) VALUES ('waiter','waiter',3);

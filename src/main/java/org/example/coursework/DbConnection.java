@@ -11,7 +11,7 @@ public class DbConnection {
     private static String user = "postgres";
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url,password,user);
+        return DriverManager.getConnection(url,user,password);
     }
 
 }

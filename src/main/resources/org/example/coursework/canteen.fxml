@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.coursework.controllers.CanteenController">
+    <children>
+        <Pane prefHeight="78.0" prefWidth="987.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Button layoutY="-5.0" mnemonicParsing="false" style="-fx-background-color: a41414; -fx-background-radius: 0px 0px 50px 0px;" text="Back" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="34.0" />
+                    </font>
+                </Button>
+                <Text layoutX="800.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canteen">
+                    <font>
+                        <Font name="System Bold" size="45.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <Pane layoutY="92.0" prefHeight="545.0" prefWidth="993.0" style="-fx-background-color: a41414;">
+            <children>
+                <Label layoutX="749.0" layoutY="4.0" text="Payment" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+                <Label layoutX="743.0" layoutY="74.0" text="Order ID :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="745.0" layoutY="109.0" text="Amount :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="orderID" layoutX="815.0" layoutY="70.0" prefHeight="25.0" prefWidth="164.0" promptText="Enter Order ID" />
+                <TextField fx:id="amount" layoutX="815.0" layoutY="105.0" prefHeight="25.0" prefWidth="164.0" promptText="Amount" />
+                <Line endX="-100.00003051757812" endY="435.39996337890625" fill="WHITE" layoutX="827.0" layoutY="82.0" startX="-101.00003051757812" startY="-81.00000762939453" stroke="WHITE" strokeWidth="3.0" />
+                <Label layoutX="744.0" layoutY="156.0" text="Method : " textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Button layoutX="745.0" layoutY="226.0" mnemonicParsing="false" onAction="#handlePayButton" prefHeight="34.0" prefWidth="228.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" text="Pay">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Label layoutX="734.0" layoutY="430.0" text="Status :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="status" layoutX="784.0" layoutY="426.0" prefHeight="25.0" prefWidth="201.0" promptText="Status of the Order" />
+                <Label layoutX="252.0" layoutY="4.0" text="Order" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+                <Label layoutX="29.0" layoutY="74.0" text="Dish :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="item" layoutX="91.0" layoutY="70.0" prefHeight="25.0" prefWidth="195.0" promptText="Select dish" />
+
+                <Label layoutX="29.0" layoutY="108.0" text="Quantity :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="quantity" layoutX="91.0" layoutY="104.0" prefHeight="25.0" prefWidth="195.0" promptText="Enter Quantity" />
+
+                <Button layoutX="312.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="25.0" prefWidth="149.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" text="Add">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="312.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleRemoveButton" prefHeight="25.0" prefWidth="149.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" text="Remove">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Line endX="203.878662109375" endY="119.0" fill="WHITE" layoutX="520.0" layoutY="73.0" startX="-519.0" startY="119.0" stroke="WHITE" strokeWidth="3.0" />
+                <Label layoutX="168.0" layoutY="191.0" text="Cart" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+                <Label layoutX="511.0" layoutY="191.0" text="Menu" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+                <Line endX="-101.00003051757812" endY="245.39996337890625" fill="WHITE" layoutX="483.0" layoutY="273.0" startX="-101.00003051757812" startY="-81.00000762939453" stroke="WHITE" strokeWidth="3.0" />
+                <TableView fx:id="CartTab" layoutX="14.0" layoutY="241.0" prefHeight="266.0" prefWidth="356.0">
+                    <columns>
+                        <TableColumn fx:id="imageCart" prefWidth="91.0" text="Image" />
+                        <TableColumn fx:id="dishCart" prefWidth="78.0" text="Dish" />
+                        <TableColumn fx:id="quantityCart" prefWidth="63.0" text="Quantity" />
+                        <TableColumn fx:id="caloriesCart" minWidth="0.0" prefWidth="62.0" text="Calories" />
+                        <TableColumn fx:id="priceCart" prefWidth="61.0" text="Price" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="MenuTab" layoutX="395.0" layoutY="238.0" prefHeight="266.0" prefWidth="318.0">
+                    <columns>
+                        <TableColumn fx:id="imageMenu" prefWidth="88.0" text="Image" />
+                        <TableColumn fx:id="dishMenu" prefWidth="91.0" text="Dish" />
+                        <TableColumn fx:id="caloriesMenu" minWidth="0.0" prefWidth="71.0" text="Calories" />
+                        <TableColumn fx:id="priceMenu" prefWidth="67.0" text="Price" />
+                    </columns>
+                </TableView>
+                <RadioButton fx:id="upi" layoutX="777.0" layoutY="187.0" mnemonicParsing="false" text="UPI" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="ewallet" layoutX="841.0" layoutY="187.0" mnemonicParsing="false" text="E-Wallet" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="cash" layoutX="922.0" layoutY="187.0" mnemonicParsing="false" text="Cash" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </RadioButton>
+                <Label fx:id="selectOneOption" layoutX="704.0" layoutY="260.0" text="Select One Option" visible="false">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
